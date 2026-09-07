@@ -2,8 +2,17 @@ public class Exersice {
 
     static public void main(){
 
-        for (int i = 1; i < 17 ; i++) {
-            IO.println(i);
+        int variabel = 65536;
+        boolean aBool = true;
+
+
+        while ( aBool) {
+            IO.println(variabel);
+            variabel = variabel >> 1;
+            if (variabel < 2)
+            aBool = false;
+
+
 
         }
 
