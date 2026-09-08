@@ -4,25 +4,25 @@ public class Exersice {
 
     static public void main(){
 
-        String[] text = new String[10];
-        int count = 0;
-        boolean b = true;
+        String sentence = IO.readln("Skriv en mening: ");
 
-        while (b) {
+         String lowerCase = sentence.toLowerCase();
 
-            text[count] = IO.readln("Skriv ett ord: ");
 
-            if (text[count].equals(".")|| text[count].equals(" "))
-                return;
+        boolean b = lowerCase.contains("java");
 
-            count++;
+        IO.println(sentence.toUpperCase());
+        IO.println(sentence.length());
 
-            for  (int i = 0; i< count; i++ )
-            IO.print(text[i] +" ");
+        int last = sentence.length()-1;
+        String[] lettersFromSentence = new String[last];
+        String reverseSentence = String.valueOf(sentence.charAt(last));
 
-            IO.println();
 
-        }
+
+        if (b)
+            IO.println("Meningen innehåller ordet Java" );
+
 
     }
       }
