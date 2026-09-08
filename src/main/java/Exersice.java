@@ -1,22 +1,30 @@
+import java.sql.Array;
+
 public class Exersice {
 
     static public void main(){
 
-       int counter = 0;
+      long number = Math.round(Math.random() * 99 + 1);
+      int guesses = 0;
 
-        boolean[] countArray ={true, false, false, true, false, true, false, false, true, false};
+      boolean b = true ;
 
-        for (int i = 0; i< countArray.length; i++){
-            if (!countArray[i]){
-                counter++;
+      while (b) {
+          int guess = Integer.parseInt(IO.readln("Gissa ett på ett tal 1-100: "));
+          guesses++;
 
-            }
-        }
+          if (guess < number)
+              IO.println("Talet är större.");
 
-        IO.println(counter);
+          else if (guess > number)
+              IO.println("Talet är mindre.");
 
-
-
+          else {
+              IO.println("Rätt gissat, talet var " + number + "!");
+              IO.println("Du behövde gissningar" + guesses + " för att gissa rätt.");
+              b = false;
+      }
+      }
 
 
     }
