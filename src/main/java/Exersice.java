@@ -13,7 +13,7 @@ public class Exersice {
             text[count] = IO.readln("Skriv ett ord: ");
 
             if (text[count].equals(".")|| text[count].equals(" "))
-                b = false;
+                return;
 
             count++;
 
