@@ -22,8 +22,6 @@ public class Exersice {
 
             IO.println();
 
-
-
         }
 
     }
