@@ -8,7 +8,6 @@ public class Exersice {
         String lowerCase = sentence.toLowerCase();
         String reverseSentence = "";
 
-
         boolean b = lowerCase.contains("java");
 
         IO.println(sentence.toUpperCase());
@@ -19,15 +18,10 @@ public class Exersice {
         for (int i = 0; i < sentence.length(); i++)
              reverseSentence = reverseSentence + String.valueOf(sentence.charAt(last-i));
 
-
         IO.println(reverseSentence);
-
-
-
 
         if (b)
             IO.println("Meningen innehåller ordet Java" );
-
 
     }
       }
