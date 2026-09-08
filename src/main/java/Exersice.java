@@ -5,8 +5,8 @@ public class Exersice {
     static public void main(){
 
         String sentence = IO.readln("Skriv en mening: ");
-
-         String lowerCase = sentence.toLowerCase();
+        String lowerCase = sentence.toLowerCase();
+        String reverseSentence = "";
 
 
         boolean b = lowerCase.contains("java");
@@ -15,8 +15,13 @@ public class Exersice {
         IO.println(sentence.length());
 
         int last = sentence.length()-1;
-        String[] lettersFromSentence = new String[last];
-        String reverseSentence = String.valueOf(sentence.charAt(last));
+
+        for (int i = 0; i < sentence.length(); i++)
+             reverseSentence = reverseSentence + String.valueOf(sentence.charAt(last-i));
+
+
+        IO.println(reverseSentence);
+
 
 
 
