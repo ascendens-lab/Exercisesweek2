@@ -4,14 +4,26 @@ public class Exersice {
 
     static public void main(){
 
-        for(int y=0; y<(5); y++) {
-            for(int x=0; x<5; x++) {
-                if( x == y )
-                    System.out.print("#");
-                else
-                    System.out.print(".");
-            }
-            System.out.println("");
+        String[] text = new String[10];
+        int count = 0;
+        boolean b = true;
+
+        while (b) {
+
+            text[count] = IO.readln("Skriv ett ord: ");
+
+            if (text[count].equals(".")|| text[count].equals(" "))
+                b = false;
+
+            count++;
+
+            for  (int i = 0; i< count; i++ )
+            IO.print(text[i] +" ");
+
+            IO.println();
+
+
+
         }
 
     }
